@@ -1,3 +1,19 @@
+# react-router-dom library
+
+A library used navigation between pages in a React application without reloading the entire website.
+
+```
+npm install react-router-dom
+```
+
+# axios library
+
+A library to send HTTP requests from your React application to a server or API
+
+```
+npm install axios
+```
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
