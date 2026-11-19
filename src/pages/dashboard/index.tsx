@@ -1,7 +1,9 @@
-export default function Dashboard() {
+function Dashboard() {
     return (
-        <div>
-            <h1>WELCOME!</h1>
-        </div>
-    );
+        <h1 className="text-2xl font-bold">
+            Dashboard
+        </h1>
+    )
 }
+
+export default Dashboard;
