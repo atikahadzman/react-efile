@@ -1,5 +1,4 @@
-
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import type { ReactNode } from "react";
 import {
     HiOutlineHome,
@@ -28,6 +27,12 @@ const navItems: NavItem[] = [
 ];
 
 export default function Sidebar({ collapsed }: SidebarProps) {
+    const navigate = useNavigate();
+    const handleLogout = async () => {
+        localStorage.removeItem('access_token');
+        navigate("/login");
+    };
+
     return (
         <aside
             className={`
@@ -91,6 +96,7 @@ export default function Sidebar({ collapsed }: SidebarProps) {
             <div className="hidden md:block p-3 border-t border-white/20">
                 <div className="bg-white rounded-lg p-3 flex flex-col gap-3">
                     <button
+                        onClick={handleLogout}
                         type="button"
                         className="
                             w-full flex items-center justify-center gap-2
