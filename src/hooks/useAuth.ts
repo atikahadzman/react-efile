@@ -26,6 +26,17 @@ export function useAuth() {
                 data.access_token
             );
 
+            localStorage.setItem(
+                "user",
+                JSON.stringify({
+                    id: data.id,
+                    name: data.name,
+                    username: data.username,
+                    unit: data.unit,
+                    role: data.role,
+                })
+            );
+
             navigate("/dashboard");
         } catch (err: unknown) {
             if (axios.isAxiosError(err)) {
