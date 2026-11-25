@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import {
     HiOutlineHome,
     HiLogout,
+    HiDocumentDuplicate
 } from "react-icons/hi";
 
 interface SidebarProps {
@@ -23,6 +24,12 @@ const navItems: NavItem[] = [
         to: "/dashboard",
         label: "Dashboard",
         icon: <HiOutlineHome size={20} />,
+    },
+    {
+        id: "files",
+        to: "/files",
+        label: "Files",
+        icon: <HiDocumentDuplicate size={20} />,
     }
 ];
 

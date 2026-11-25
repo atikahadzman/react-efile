@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from "./layout/layout";
 import Login from "./pages/login";
 import Dashboard from "./pages/dashboard";
+import Files from "./pages/files";
 import './App.css'
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
                 <Route
                     path="/dashboard"
                     element={<Dashboard />}
+                />
+                <Route
+                    path="/files"
+                    element={<Files />}
                 />
             </Route>
         </Routes>
